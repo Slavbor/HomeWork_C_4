@@ -1,30 +1,35 @@
 ﻿using static System.Console;
+
 Clear();
 
+int[] arr = GetArray(8);
+
+PrintArray(arr);
 
 
-PrintArray(GetArray(8, 0, 100));
 
 
 
 
- int[] GetArray(int size, int RandomFrom, int RandomTo)
- {
+
+
+
+int[] GetArray(int size)
+{
     int[] array = new int[size];
-    
+
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(RandomFrom, RandomTo + 1);
+        array[i] = new Random().Next(0, 100 + 1);
     }
     return array;
- }
-
+}
 
 void PrintArray(int[] arr)
 {
-    for(int i =0; i < arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        Write ($"{arr[i]}, ");
+        Write($"{arr[i]}");
+        Write(i < arr.Length - 1 ? ", " : "");
     }
-    WriteLine();
 }

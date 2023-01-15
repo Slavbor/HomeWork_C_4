@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+Clear();
 
 WriteLine("Input numbers: ");
 
